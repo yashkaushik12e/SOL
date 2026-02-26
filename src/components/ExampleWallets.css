@@ -1,0 +1,36 @@
+.example-wallets {
+  margin-top: 1.5rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid var(--border);
+}
+
+.example-wallets__label {
+  font-size: 0.72rem;
+  font-family: var(--font-mono);
+  color: var(--muted);
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  margin-bottom: 0.6rem;
+}
+
+.example-wallets__chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+}
+
+.example-wallets__chip {
+  font-size: 0.68rem;
+  font-family: var(--font-mono);
+  padding: 0.3rem 0.6rem;
+  border-radius: 6px;
+  border: 1px solid var(--border);
+  color: var(--muted);
+  transition: all 0.2s;
+}
+
+.example-wallets__chip:hover {
+  border-color: var(--accent);
+  color: var(--accent);
+  background: rgba(153, 69, 255, 0.06);
+}

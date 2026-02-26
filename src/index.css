@@ -1,0 +1,45 @@
+:root {
+  --bg: #0a0a0f;
+  --surface: #111118;
+  --border: #1e1e2e;
+  --accent: #9945ff;
+  --accent2: #14f195;
+  --text: #e8e8f0;
+  --muted: #555570;
+  --error: #ff4d6d;
+  --font-display: 'Syne', sans-serif;
+  --font-mono: 'Space Mono', monospace;
+}
+
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background: var(--bg);
+  color: var(--text);
+  font-family: var(--font-display);
+  min-height: 100vh;
+}
+
+button {
+  cursor: pointer;
+  font-family: var(--font-display);
+  border: none;
+  background: none;
+}
+
+input {
+  font-family: var(--font-mono);
+}
+
+a {
+  color: var(--accent);
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}

@@ -1,0 +1,85 @@
+.app {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Animated background grid */
+.bg-grid {
+  position: fixed;
+  inset: 0;
+  background-image:
+    linear-gradient(rgba(153, 69, 255, 0.04) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(153, 69, 255, 0.04) 1px, transparent 1px);
+  background-size: 40px 40px;
+  pointer-events: none;
+  z-index: 0;
+}
+
+/* Glow orbs */
+.bg-orb {
+  position: fixed;
+  border-radius: 50%;
+  pointer-events: none;
+  z-index: 0;
+}
+
+.bg-orb--purple {
+  width: 600px;
+  height: 600px;
+  background: radial-gradient(circle, rgba(153, 69, 255, 0.12) 0%, transparent 70%);
+  top: -200px;
+  right: -200px;
+}
+
+.bg-orb--green {
+  width: 400px;
+  height: 400px;
+  background: radial-gradient(circle, rgba(20, 241, 149, 0.08) 0%, transparent 70%);
+  bottom: -150px;
+  left: -100px;
+}
+
+/* Main container */
+.container {
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  max-width: 560px;
+  animation: fadeUp 0.7s ease both;
+}
+
+/* Card */
+.card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 20px;
+  padding: 2rem;
+  position: relative;
+  overflow: hidden;
+}
+
+.card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, var(--accent), transparent);
+}
+
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

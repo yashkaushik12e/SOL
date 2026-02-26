@@ -1,0 +1,105 @@
+.address-input {
+  margin-bottom: 0;
+}
+
+.address-input__label {
+  display: block;
+  font-size: 0.78rem;
+  font-family: var(--font-mono);
+  color: var(--muted);
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  margin-bottom: 0.5rem;
+}
+
+.address-input__row {
+  position: relative;
+  margin-bottom: 1rem;
+}
+
+.address-input__field {
+  width: 100%;
+  background: var(--bg);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 0.85rem 3rem 0.85rem 1rem;
+  color: var(--text);
+  font-family: var(--font-mono);
+  font-size: 0.82rem;
+  outline: none;
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+.address-input__field:focus {
+  border-color: var(--accent);
+  box-shadow: 0 0 0 3px rgba(153, 69, 255, 0.15);
+}
+
+.address-input__field::placeholder {
+  color: #333350;
+}
+
+.address-input__paste {
+  position: absolute;
+  right: 0.6rem;
+  top: 50%;
+  transform: translateY(-50%);
+  background: none;
+  border: none;
+  color: var(--muted);
+  padding: 0.3rem;
+  border-radius: 6px;
+  font-size: 0.75rem;
+  font-family: var(--font-mono);
+  transition: color 0.2s;
+}
+
+.address-input__paste:hover {
+  color: var(--accent2);
+}
+
+.address-input__btn {
+  width: 100%;
+  padding: 1rem;
+  background: linear-gradient(135deg, var(--accent), #7b2fff);
+  border: none;
+  border-radius: 12px;
+  color: #fff;
+  font-family: var(--font-display);
+  font-size: 1rem;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  transition: opacity 0.2s, transform 0.15s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+}
+
+.address-input__btn:hover:not(:disabled) {
+  opacity: 0.9;
+  transform: translateY(-1px);
+}
+
+.address-input__btn:active:not(:disabled) {
+  transform: translateY(0);
+}
+
+.address-input__btn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.address-input__spinner {
+  display: inline-block;
+  width: 16px;
+  height: 16px;
+  border: 2px solid rgba(255, 255, 255, 0.3);
+  border-top-color: #fff;
+  border-radius: 50%;
+  animation: spin 0.7s linear infinite;
+}
+
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
