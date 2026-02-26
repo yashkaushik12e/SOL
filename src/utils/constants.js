@@ -1,6 +1,6 @@
 export const RPC_URLS = {
-  devnet: import.meta.env.API_KEY,
-  mainnet: import.meta.env.API_KEY,
+ devnet: import.meta.env.VITE_RPC_DEVNET || "https://api.devnet.solana.com",
+  mainnet: import.meta.env.VITE_RPC_MAINNET || "https://api.mainnet-beta.solana.com",
   testnet: "https://api.testnet.solana.com",
 };
 
