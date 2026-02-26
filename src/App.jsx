@@ -5,7 +5,7 @@ import AddressInput from "./components/AddressInput";
 import BalanceResult from "./components/BalanceResult";
 import ExampleWallets from "./components/ExampleWallets";
 import Footer from "./components/Footer";
-import { useBalance } from "./hooks/UseBalance";
+import { useBalance } from "./hooks/useBalance";
 import "./App.css"
 function App() {
   const [address, setAddress] = useState("");
